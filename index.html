@@ -78,7 +78,7 @@
             100% { transform: translateY(0px) rotate(0deg); }
         }
         h1 {
-            font-size: 1.35rem; /* スマホで見やすい文字サイズに微調整 */
+            font-size: 1.35rem;
             font-weight: 700;
             margin-bottom: 20px;
             letter-spacing: 0.05em;
@@ -132,6 +132,10 @@
             width: 100%;
             height: 220px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff; /* 白抜き商品画像が綺麗に映えるように白背景 */
         }
         .card-img {
             width: 100%;
@@ -146,6 +150,7 @@
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(to bottom, transparent 50%, var(--bg-nav) 100%);
+            pointer-events: none;
         }
         .card-content {
             padding: 24px 28px;
@@ -168,7 +173,14 @@
             font-size: 1.35rem;
             font-weight: 700;
             color: #fff;
-            margin-bottom: 6px;
+            margin-bottom: 12px;
+        }
+        .card-desc {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            font-weight: 300;
+            line-height: 1.7;
         }
         .reason-box {
             background: rgba(0, 0, 0, 0.2);
@@ -176,15 +188,15 @@
             border-left: 3px solid var(--accent-gold);
             border-radius: 0 12px 12px 0;
             margin-top: 16px;
+            margin-bottom: 24px;
             font-size: 0.95rem;
-            color: var(--text-sub);
+            color: #f8fafc;
             line-height: 1.7;
         }
         .reason-box strong {
             display: inline-block;
-            color: var(--text-main);
+            color: var(--accent-gold);
             margin-bottom: 6px;
-            background: linear-gradient(transparent 70%, rgba(251, 191, 36, 0.25) 70%);
         }
         .btn {
             display: flex;
@@ -247,21 +259,26 @@
         </header>
 
         <div class="items-list">
-            <!-- ① ブレインスリープピロー -->
+            <!-- ① ヒツジのいらない枕 -->
             <article class="card">
-                <div class="card-img-wrapper">
-                    <img src="images/premium_pillow_product.png" alt="ブレインスリープピロー" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?q=80&w=800&auto=format&fit=crop'">
+                <div class="card-img-wrapper" style="object-fit: contain;">
+                    <!-- 楽天アフィリエイトの画像タグをそのまま埋め込み、スタイルを上書き -->
+                    <a href="https://hb.afl.rakuten.co.jp/ichiba/5258e607.8c4654f2.5258e608.a835d401/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2F33taiyo%2Fhitsuji%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://hbb.afl.rakuten.co.jp/hgb/5258e607.8c4654f2.5258e608.a835d401/?me_id=1383465&item_id=10000020&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2F33taiyo%2Fcabinet%2Fshironuki%2Fimgrc0110897767.jpg%3F_ex%3D240x240&s=240x240&t=pict" border="0" style="width: 100%; height: 100%; object-fit: contain; padding: 20px;" alt="ヒツジのいらない枕" title="">
+                    </a>
                     <div class="card-img-overlay"></div>
                 </div>
                 <div class="card-content">
                     <div class="badge"><i class="fa-solid fa-crown"></i> PICK UP ①</div>
-                    <h2 class="card-title">ブレインスリープピロー</h2>
+                    <h2 class="card-title">ヒツジのいらない枕</h2>
+                    <p class="card-desc">
+                        水に浮かんでいるような極上の感触を持つ「特製TPE素材」を採用し、首や肩への圧力を極限まで分散させます。熱がまったくこもらない完全通気構造で、睡眠中の寝汗も防ぐ最先端のスリープテック枕です。
+                    </p>
                     <div class="reason-box">
-                        <strong>おすすめポイント：</strong><br>
-                        脳の深部体温を急降下させる「熱がこもらない特殊な通気性構造」で、首への負担もゼロに極限分散。昔は夜中に何度も目が覚めて枕を裏返していましたが、これに変えてから一度も起きず、朝の頭痛がウソのように消え去りました！
+                        <strong><i class="fa-solid fa-lightbulb"></i> おすすめポイント：</strong><br>
+                        昔は夜中に何度も目が覚め（中途覚醒）、頭が熱くて枕を何度も裏返していました。この枕に変えてから、朝まで一度も目が覚めずに気絶したように眠れるようになり、長年の首の重だるさもウソのように消え去りました！
                     </div>
-                    <br>
-                    <a href="#" class="btn">詳細を見る (Amazon/楽天) <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="https://hb.afl.rakuten.co.jp/ichiba/5258e607.8c4654f2.5258e608.a835d401/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2F33taiyo%2Fhitsuji%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" class="btn" target="_blank" rel="nofollow sponsored noopener">詳細を見る (Amazon/楽天) <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </article>
 
@@ -274,12 +291,14 @@
                 <div class="card-content">
                     <div class="badge"><i class="fa-solid fa-mug-hot"></i> PICK UP ②</div>
                     <h2 class="card-title">ファイン グリシン プレミアム</h2>
+                    <p class="card-desc">
+                        「睡眠アミノ酸」と呼ばれるグリシンやGABA、L-テアニンなどを配合した休息サプリメント。交感神経（緊張）から副交感神経（リラックス）への切り替えをスムーズにし、脳の過覚醒を落ち着かせます。
+                    </p>
                     <div class="reason-box">
-                        <strong>おすすめポイント：</strong><br>
-                        「睡眠アミノ酸」のグリシンやGABAを配合し、緊張状態（交感神経）から自然なリラックス状態へ切り替えてくれます。「明日も仕事なのに…」と心臓がバクバクしていた日々でも、これを飲む習慣で魔法のように緊張の糸がスッと切れる安心感を取り戻せました。
+                        <strong><i class="fa-solid fa-lightbulb"></i> おすすめポイント：</strong><br>
+                        「明日も仕事なのに…眠れなかったらどうしよう」と心臓がバクバクしていた日々でも、これを飲む習慣を作ったことで魔法のように緊張の糸がスッと切れる安心感を取り戻せました。入眠儀式のお供に最適です。
                     </div>
-                    <br>
-                    <a href="#" class="btn">詳細を見る (Amazon/楽天) <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#" class="btn" target="_blank">詳細を見る (Amazon/楽天) <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </article>
 
@@ -292,12 +311,14 @@
                 <div class="card-content">
                     <div class="badge"><i class="fa-solid fa-sun"></i> PICK UP ③</div>
                     <h2 class="card-title">YABAE 光目覚まし時計</h2>
+                    <p class="card-desc">
+                        設定した時間に合わせて「本物の太陽光」のような強さで徐々に部屋を明るくし、光の力で睡眠ホルモン（メラトニン）の分泌を抑えて圧倒的に自然な目覚めを促してくれます。
+                    </p>
                     <div class="reason-box">
-                        <strong>おすすめポイント：</strong><br>
-                        設定した時間に本物の太陽光のような強さで部屋を明るくし、光の力で自然な目覚めを促してくれます。爆音のアラームで絶望と共に起きる朝から解放され、目覚めもスッキリ。日中のセロトニンが分泌されるおかげで夜も自然に眠くなる、「完璧な睡眠サイクル」が作れました。
+                        <strong><i class="fa-solid fa-lightbulb"></i> おすすめポイント：</strong><br>
+                        爆音のアラームで絶望と共に跳ね起きる朝から解放されました。日差しで起きることで日中のセロトニンが分泌され、結果的に「夜も自然に眠くなる」という完璧な睡眠サイクルが作れます。
                     </div>
-                    <br>
-                    <a href="#" class="btn">詳細を見る (Amazon/楽天) <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="#" class="btn" target="_blank">詳細を見る (Amazon/楽天) <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
             </article>
         </div>
