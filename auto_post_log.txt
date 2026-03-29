@@ -1,0 +1,13 @@
+[2026-03-29 21:05:34] Day 2の自動投稿を開始します: post_day2.md
+自動投稿中にエラーが発生しました:
+Traceback (most recent call last):
+  File "C:\Users\kazuk\.gemini\antigravity\sleep-threads-ai\auto_post.py", line 129, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\kazuk\.gemini\antigravity\sleep-threads-ai\auto_post.py", line 95, in main
+    print(f" \U0001f680 {filepath} から {len(posts)} 件の連続スレッド投稿を開始します")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp932' codec can't encode character '\U0001f680' in position 1: illegal multibyte sequence
+
+==================================================
+
